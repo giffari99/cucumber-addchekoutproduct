@@ -11,7 +11,10 @@ public enum ScenarioTest {
 
     //feature addtocart
     T5("Customer add new products"),
-    T6("Customer Checkout Product");
+    T6("Invalid information without lastname and postal code"),
+    T7("Invalid information without firstname and postal code"),
+    T8("Invalid information without firstname and lastname"),
+    T9("Customer Valid Input Information");
 
     private String scenarioTestName;
 

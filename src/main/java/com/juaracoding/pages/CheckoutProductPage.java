@@ -1,6 +1,7 @@
 package com.juaracoding.pages;
 
 import com.juaracoding.drivers.DriverSingleton;
+import com.juaracoding.utils.Utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,6 +36,26 @@ public class CheckoutProductPage {
 
     @FindBy(xpath = "//button[@id='back-to-products']")
     private WebElement btnHome;
+
+
+public void information(String firstname, String lastname, String postalcode){
+
+    if(this.firstName.getText() != null || this.lastName.getText() != null || this.postalCode.getText() != null)
+    Utils.delay(1);
+    this.firstName.clear();
+    this.lastName.clear();
+    this.postalCode.clear();
+
+
+    this.firstName.sendKeys(firstname);
+    Utils.delay(1);
+    this.lastName.sendKeys(lastname);
+    Utils.delay(1);
+    this.postalCode.sendKeys(postalcode);
+}
+
+
+
 
 
     public void setBtnCheckout(){
